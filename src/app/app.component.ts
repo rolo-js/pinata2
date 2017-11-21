@@ -13,15 +13,12 @@ export class AppComponent {
     navigation: true,
     css3: true,
     navigationPosition: 'right',
-    verticalCentered: false
+    verticalCentered: false,
+    onLeave: ( index, nextSlideIndex, direction) => {
+      console.log(nextSlideIndex);
+      this.title = nextSlideIndex;
+    }
   })
-//   @Input() public options: MnFullpageOptions = new MnFullpageOptions({
-//     navigation: true,
-//     navigationPosition: 'right',
-//     keyboardScrolling: false,
-//     scrollingSpeed: 2000
-// });
-// constructor(public fullpageService: MnFullpageService) {
-// }
+
 
 }
