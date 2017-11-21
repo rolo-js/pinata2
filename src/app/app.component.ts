@@ -9,11 +9,12 @@ import { MnFullpageOptions, MnFullpageService } from 'ngx-fullpage';
 export class AppComponent {
   title = 'pi';
   @Output() public options: MnFullpageOptions = new MnFullpageOptions({
-    scrollingSpeed: 700,
+    scrollingSpeed: 1000,
     navigation: true,
     css3: true,
     navigationPosition: 'right',
     verticalCentered: false,
+    scrollOverflow: true,
     onLeave: ( index, nextSlideIndex, direction) => {
       console.log(nextSlideIndex);
       this.title = nextSlideIndex;
