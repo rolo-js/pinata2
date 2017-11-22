@@ -1,0 +1,40 @@
+@import "../_variables.less";
+
+header {
+    
+    position:fixed;
+    height: 50px;
+    width: 100%;
+    background: transparent;
+    z-index:9;
+
+    transition: padding ease-in-out 0.3s;
+    top:0;
+    &.gradient {
+        background: -webkit-gradient(90deg, from(@menu-bg-gradiente1), to(@menu-bg-gradiente2));
+        background: -webkit-linear-gradient(90deg, @menu-bg-gradiente1 , @menu-bg-gradiente2);
+        background: linear-gradient( 90deg, @menu-bg-gradiente1, @menu-bg-gradiente2);
+        padding: 30px 0;
+    }
+
+    
+    @media (max-width: 767px) { 
+        padding: 30px 0;
+    }
+    @media (min-width: 768px) and (max-width: 991px){ 
+        padding: 30px 0;
+     }
+    @media (min-width: 992px) and (max-width: 1199px){  
+        padding: 60px 0 0 0;
+    }
+    @media (min-width: 1200px){  
+        padding: 60px 0 0 0;
+    }
+
+
+}
+
+.container {
+    display:flex;
+    justify-content: space-between;
+}

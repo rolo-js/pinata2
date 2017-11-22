@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { MnFullpageService } from 'ngx-fullpage';
 
 @Component({
   selector: 'pi-logo',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogoComponent implements OnInit {
 
-  isGreen = false;
-  
-  constructor() { }
+  @Input()
+  menuKind = 'white';
+
+  constructor(private fullPage: MnFullpageService) { }
 
   ngOnInit() {
   }

@@ -1,3 +1,6 @@
-<p>
-  topnav works!
-</p>
+<header    [ngClass]="{green:menuKind=='green', gradient:menuKind=='gradient'}">
+  <div class="container">
+      <pi-logo [menuKind]="menuKind"></pi-logo>
+      <pi-menu [menuKind]="menuKind"></pi-menu>
+  </div>
+</header>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MnFullpageOptions, MnFullpageService } from 'ngx-fullpage';
+import { Subscription } from 'rxjs/Subscription';
+import { AppComponent } from '../app.component'
 
 @Component({
   selector: 'pi-topnav',
@@ -7,9 +10,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopnavComponent implements OnInit {
 
-  constructor() { }
+  private fpSubscription: Subscription;
+  menuKind = 'white';
+  constructor(private appComponent: AppComponent) {
+   }
 
   ngOnInit() {
+    this.fpSubscription = this.appComponent.currentPage$
+      .subscribe(nextPage => {
+        switch (nextPage) {
+          case 2:
+              this.menuKind = 'green';
+            break;
+          case 1: case 3:
+            this.menuKind = 'white';
+            break;
+          default:
+            this.menuKind = 'gradient'
+            break;
+        }
+      });
   }
 
 }
