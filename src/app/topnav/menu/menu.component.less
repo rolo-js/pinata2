@@ -52,11 +52,38 @@ ul {
         display: inline-block;
     }
 }
+ul.floating {
+    
+    padding: 0;
+    background-color: #aaaaaa;
+    li {
+        color: white;
+    }
+    @media (max-width: 767px) { 
+        display: inline-block;
+        position: fixed;
+        top: 80px;
+        left:0;
+
+    }
+    @media (min-width: 768px) and (max-width: 991px){ 
+        display: inline-block;
+        position: fixed;
+        top: 80px;
+        left:0;
+     }
+    @media (min-width: 992px) and (max-width: 1199px){  
+        display: inline-block;
+    }
+    @media (min-width: 1200px){  
+        display: inline-block;
+    }    
+}
 
 #burger {
     display: inline-block;
-    width: 60px;
-    height: 45px;
+    width: 45px;
+    height: 35px;
     position: relative;
     //margin: 50px auto;
     -webkit-transform: rotate(0deg);
@@ -67,13 +94,14 @@ ul {
     -moz-transition: .5s ease-in-out;
     -o-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
+    margin-top: 7px;
     cursor: pointer;
     > span {
         display: block;
         position: absolute;
-        height: 9px;
+        height: 7px;
         width: 100%;
-        background: white;
+        background: @burger-white;
         border-radius: 9px;
         opacity: 1;
         left: 0;
@@ -98,6 +126,12 @@ ul {
     @media (min-width: 1200px){  
         display: none;
     }
+
+    &.green {
+        >span {
+            background: @texto-verde;
+        }
+    }
 }
 
 
@@ -110,7 +144,7 @@ ul {
   }
   
   #burger span:nth-child(2) {
-    top: 18px;
+    top: 14px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     -o-transform-origin: left center;
@@ -118,7 +152,7 @@ ul {
   }
   
   #burger span:nth-child(3) {
-    top: 36px;
+    top: 28px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     -o-transform-origin: left center;
@@ -144,6 +178,6 @@ ul {
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    top: 39px;
+    top: 29px;
     left: 8px;
   }

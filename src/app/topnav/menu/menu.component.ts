@@ -28,4 +28,9 @@ export class MenuComponent implements OnInit {
     this.opened = !this.opened;
   }
 
+  goto(page: number) {
+    this.opened = false;
+    this.fullPage.moveTo(page);
+  }
+
 }

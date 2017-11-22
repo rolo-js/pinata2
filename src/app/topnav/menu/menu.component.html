@@ -1,18 +1,18 @@
-<ul [class.green]="menuKind=='green'">
+<ul [ngClass]="{green: menuKind=='green', floating:opened}">
   <li [class.active]="activePage===2">
-    <a (click)="fullPage.moveTo(2)" >NOSOTROS</a>
+    <a (click)="goto(2)" >NOSOTROS</a>
   </li>
   <li [class.active]="activePage===3">
-    <a (click)="fullPage.moveTo(3)" >SERVICIOS</a>
+    <a (click)="goto(3)" >SERVICIOS</a>
   </li>
   <li [class.active]="activePage===4">
-    <a (click)="fullPage.moveTo(4)" >CLIENTES</a>
+    <a (click)="goto(4)" >CLIENTES</a>
   </li>
   <li [class.active]="activePage===5">
-    <a (click)="fullPage.moveTo(5)">CONTACTO</a>
+    <a (click)="goto(5)">CONTACTO</a>
   </li>
 </ul>
-<div id="burger" (click)="toggle()" [class.open]="opened">
+<div id="burger" (click)="toggle()" [ngClass]="{open: opened, green: menuKind=='green'}">
     <span></span>
     <span></span>
     <span></span>
