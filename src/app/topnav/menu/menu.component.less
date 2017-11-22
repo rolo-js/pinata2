@@ -4,17 +4,19 @@
     display: inline-block;
     font-family: SansationLight;
     height: 50px;
-    line-height: 50px;
+    //line-height: 50px;
     cursor: pointer;
 
     ul li { 
         display: inline-block;
-        padding-left: 20px;
+        padding-left: 32px;
         color:white;
         opacity: 0.5;
         transition: color 0.5s ease-in-out 0.3s, opacity 0 ease-in-out 0.1s;
         
-    
+        &:last-child {
+            padding-left: 5px;
+        }
 
         &.active { 
             font-weight: bold; 
@@ -26,12 +28,22 @@
         a {
             text-decoration: none;
             &:visited { color: white;}
+
+            svg  {
+                width: 24px;
+                height: auto;
+                fill: white;
+            }
         }
+
     }
     ul.green li {
         color: @menu-gray;
         a {
             &:visited { color: @menu-gray; }
+            svg  {
+                fill: @texto-verde;
+            }
         }
     }
 }
@@ -46,10 +58,12 @@ ul {
         display: none;
      }
     @media (min-width: 992px) and (max-width: 1199px){  
-        display: inline-block;
+        display: flex;
+        align-items: center;
     }
     @media (min-width: 1200px){  
-        display: inline-block;
+        display: flex;
+        align-items: center;
     }
 }
 ul.floating {
@@ -82,7 +96,7 @@ ul.floating {
 
 #burger {
     display: inline-block;
-    width: 45px;
+    width: 24px;
     height: 35px;
     position: relative;
     //margin: 50px auto;
@@ -99,7 +113,7 @@ ul.floating {
     > span {
         display: block;
         position: absolute;
-        height: 7px;
+        height: 4px;
         width: 100%;
         background: @burger-white;
         border-radius: 9px;
@@ -144,7 +158,7 @@ ul.floating {
   }
   
   #burger span:nth-child(2) {
-    top: 14px;
+    top: 8px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     -o-transform-origin: left center;
@@ -152,7 +166,7 @@ ul.floating {
   }
   
   #burger span:nth-child(3) {
-    top: 28px;
+    top: 16px;
     -webkit-transform-origin: left center;
     -moz-transform-origin: left center;
     -o-transform-origin: left center;
@@ -165,7 +179,7 @@ ul.floating {
     -o-transform: rotate(45deg);
     transform: rotate(45deg);
     top: -3px;
-    left: 8px;
+    left: 4px;
   }
   
   #burger.open span:nth-child(2) {
@@ -178,6 +192,6 @@ ul.floating {
     -moz-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
     transform: rotate(-45deg);
-    top: 29px;
-    left: 8px;
+    top: 14px;
+    left: 4px;
   }
