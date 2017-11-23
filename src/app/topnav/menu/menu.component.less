@@ -4,94 +4,118 @@
     display: inline-block;
     font-family: SansationLight;
     height: 50px;
-    //line-height: 50px;
     cursor: pointer;
+}
 
-    ul li { 
-        display: inline-block;
-        padding-left: 32px;
-        color:white;
-        opacity: 0.5;
-        transition: color 0.5s ease-in-out 0.3s, opacity 0 ease-in-out 0.1s;
+#menu-wrapper {
+    position: relative;
+    ul {
+        display: flex;
+        align-items: center;
+        li {
+            color: white;
+            display: inline-block;
+            opacity: 0.5;
+            transition: opacity  ease-in-out 0.2s, color ease-in-out 0.5s;
+            padding-left: 32px;
+            &.half-padding { padding-left: 16px; }
+            &.small-padding { padding-left: 5px; }
+            &.active { 
+                font-weight: bold; 
+                opacity: 1;
+            }
+            &:hover {
+                opacity: 1;
+            }
+            a {
+                text-decoration: none;
+                &:visited { color: @texto-blanco; }
+                svg  {
+                    width: 24px;
+                    height: auto;
+                    fill: @texto-blanco;
+                    transition: all ease-in-out 0.5s;
+                }
+                
+            }
+        }
+
+        &.green li {
+            color: @menu-gray;
+            a {
+                svg { fill: @texto-verde }
+            }
+            a.visited { 
+                color: @menu-gray; 
+                svg { fill: @texto-verde }
+            }
+            &.active {
+                color: @texto-verde;
+            }
+        }
+    }
+    @media (max-width: 767px) { 
+        left: 774px;
+        top:80px;
+        width:100%;
+        position: fixed;
+        transition: left ease-in-out 0.5s;
+
+        overflow: hidden;
+        height: 60px;
+    }
+    @media (min-width: 768px) and (max-width: 991px){ 
+        top:0;
+        left:0;
+     }
+    @media (min-width: 992px) and (max-width: 1199px){  
+        top:0;
+        left:0;
+    }
+    @media (min-width: 1200px){  
+        top:0;
+        left:0;
+    }
+    &.floating {
+        @media (max-width: 767px) { 
+            left: 0;
+            top:80px;
+            overflow: hidden;
+            width: 100%;
+        }
+        ul {
+            overflow-x: scroll;
+            overflow-y: hidden;
+            padding-bottom: 40px;
+            li {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
         
-        &:last-child {
-            padding-left: 5px;
-        }
-
-        &.active { 
-            font-weight: bold; 
-            opacity: 1;
-        }
-        &:hover {
-            opacity: 1;
-        }
-        a {
-            text-decoration: none;
-            &:visited { color: white;}
-
-            svg  {
-                width: 24px;
-                height: auto;
-                fill: white;
-            }
-        }
-
+            
     }
-    ul.green li {
-        color: @menu-gray;
-        a {
-            &:visited { color: @menu-gray; }
-            svg  {
-                fill: @texto-verde;
-            }
-        }
-    }
-}
-
-ul {
     
-    padding: 0;
-    @media (max-width: 767px) { 
-        display: none;
-    }
-    @media (min-width: 768px) and (max-width: 991px){ 
-        display: none;
-     }
-    @media (min-width: 992px) and (max-width: 1199px){  
-        display: flex;
-        align-items: center;
-    }
-    @media (min-width: 1200px){  
-        display: flex;
-        align-items: center;
-    }
-}
-ul.floating {
-    
-    padding: 0;
-    background-color: #aaaaaa;
-    li {
-        color: white;
-    }
-    @media (max-width: 767px) { 
-        display: inline-block;
-        position: fixed;
-        top: 80px;
-        left:0;
+ 
+    // @media (max-width: 767px) { 
+    //     display: inline-block;
+    //     position: fixed;
+    //     top: 80px;
+    //     left:0;
 
-    }
-    @media (min-width: 768px) and (max-width: 991px){ 
-        display: inline-block;
-        position: fixed;
-        top: 80px;
-        left:0;
-     }
-    @media (min-width: 992px) and (max-width: 1199px){  
-        display: inline-block;
-    }
-    @media (min-width: 1200px){  
-        display: inline-block;
-    }    
+    // }
+    // @media (min-width: 768px) and (max-width: 991px){ 
+    //     display: inline-block;
+    //     position: fixed;
+    //     top: 80px;
+    //     left:0;
+    //  }
+    // @media (min-width: 992px) and (max-width: 1199px){  
+    //     display: inline-block;
+    // }
+    // @media (min-width: 1200px){  
+    //     display: inline-block;
+    // }    
 }
 
 #burger {
@@ -132,7 +156,7 @@ ul.floating {
         display: inline-block;
     }
     @media (min-width: 768px) and (max-width: 991px){ 
-        display:  inline-block;
+        display:  none;
     }
     @media (min-width: 992px) and (max-width: 1199px){  
         display: none;
