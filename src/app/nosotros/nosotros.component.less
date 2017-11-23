@@ -1,0 +1,56 @@
+@import "../_variables.less";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    h1 {
+        font-family: MargotBold;
+        font-size: 44px;
+        color:@texto-verde;
+    }
+    .contenido {
+        display: flex;
+        > div {
+            width: 50%;
+        }
+
+        .descripcion {
+            font-family: SansationRegular;
+            font-size: 14px;
+            line-height: 24px;
+            color:@texto-gris96;
+            padding-right:20px;
+
+            .quote {
+                display: flex;
+                align-items: flex-start;
+                margin-top: 30px;
+                p {
+                    font-family: Margot;
+                    font-weight: bold;
+                    font-style: italic;
+                    font-size: 29px;
+                    width: 60%;
+                    opacity: 0.5;
+                    display: inline-block;
+                    margin-top: 0;
+                    line-height: 32px;
+                }
+                img {
+                    height: 30px;
+                    width: auto;
+                    transform: rotate(180deg) scaleX(-1);
+                    padding-right: 5px;
+                }
+            }
+        }
+        .valores {
+            padding-left: 20px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}

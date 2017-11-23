@@ -1,0 +1,24 @@
+<div class="wrapper container">
+  <h1>Nosotros</h1>
+  <div class="contenido">
+    <div class="descripcion">
+      <p><strong>Piñata Studio</strong> está integrada por un grupo de especialistas con más de diez años de experiencia en publicidad.</p>
+
+      <p>Somos un equipo joven, tenaz, y creemos que la creatividad es producto de un proceso basado en un método efectivo y
+        no solamente en buenas ideas.</p>
+
+      <p>Brindamos a nuestros clientes soluciones basadas en estrategias, estética y creatividad para resolver sus necesidades.
+        Buscamos resultados top of mind y share of mind que se reflejen en ventas y en presencia de marca.</p>
+      <div class="quote">
+        <img src="/assets/quote.svg" >
+        <p>
+            Sabemos que esto
+            es lo menos leído
+        </p>
+      </div>
+    </div>
+    <div class="valores">
+      <pi-valor *ngFor=" let valor of valores" [valor]="valor"></pi-valor>
+    </div>
+  </div>
+</div>
