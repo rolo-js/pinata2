@@ -5,17 +5,20 @@
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    
     h1 {
         font-family: MargotBold;
         font-size: 44px;
         color:@texto-verde;
+        @media (max-width: 767px) { margin-top:100px; }
     }
     .contenido {
         display: flex;
         > div {
             width: 50%;
+            @media (max-width: 767px) { width: 100%; }
         }
-
+        @media (max-width: 767px) { flex-direction: column; }
         .descripcion {
             font-family: SansationRegular;
             font-size: 14px;
@@ -26,7 +29,7 @@
             .quote {
                 display: flex;
                 align-items: flex-start;
-                margin-top: 30px;
+                margin-top: 40px;
                 p {
                     font-family: Margot;
                     font-weight: bold;
@@ -37,6 +40,7 @@
                     display: inline-block;
                     margin-top: 0;
                     line-height: 32px;
+                    @media (max-width: 767px) { width: 100% }
                 }
                 img {
                     height: 30px;
@@ -51,6 +55,9 @@
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
+            @media (max-width: 767px) { justify-content: left; padding-left: 0; }
         }
     }
 }
+
+

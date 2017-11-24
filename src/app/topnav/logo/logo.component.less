@@ -2,12 +2,20 @@
 
 :host {
     display: inline-block;
-    height: 50px;
     line-height: 50px;
     cursor: pointer;
+    @media (max-width: 767px) {     }
+    @media (min-width: 768px) and (max-width: 991px){      }
+    @media (min-width: 992px) and (max-width: 1199px){     }
+    @media (min-width: 1200px){      }
+    
 }
 #logosvg {
     height:50px;
+    @media (max-width: 767px) {  height: 30px; width: 75px;  }
+    @media (min-width: 768px) and (max-width: 991px){   height: 30px;  width: 75px;   }
+    @media (min-width: 992px) and (max-width: 1199px){  height: 50px;   }
+    @media (min-width: 1200px){  height: 50px;    }
     path,circle {
         fill: @logo-white;
         transition: all ease-in-out 0.3s;
