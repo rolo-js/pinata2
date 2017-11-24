@@ -10,6 +10,7 @@ import { MenuComponent } from './topnav/menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ValorComponent } from './nosotros/valor/valor.component';
+import { DisenoComponent } from './servicios/diseno/diseno.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ValorComponent } from './nosotros/valor/valor.component';
     MenuComponent,
     HomeComponent,
     NosotrosComponent,
-    ValorComponent
+    ValorComponent,
+    DisenoComponent
   ],
   imports: [
     BrowserModule,
