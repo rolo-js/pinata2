@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { MnFullpageService } from 'ngx-fullpage';
 import { Subscription } from 'rxjs/Subscription';
-import { AppComponent } from 'app/app.component';
+import { NavigatorService } from '../../navigator.service'
 
 @Component({
   selector: 'pi-menu',
@@ -15,10 +14,10 @@ export class MenuComponent implements OnInit {
   menuKind = 'white';
   activePage = 1;
   opened = false;
-  constructor(private fullPage: MnFullpageService, private appComponent: AppComponent) { }
+  constructor(private navigator: NavigatorService) { }
 
   ngOnInit() {
-    this.fpSubscription = this.appComponent.currentPage$
+    this.fpSubscription = this.navigator.currentPage$
     .subscribe(nextPage => {
       this.activePage = nextPage;
     });
@@ -30,7 +29,7 @@ export class MenuComponent implements OnInit {
 
   goto(page: number) {
     this.opened = false;
-    this.fullPage.moveTo(page);
+    this.navigator.gotoSection(page, true);
   }
 
 }

@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ValorComponent } from './nosotros/valor/valor.component';
 import { DisenoComponent } from './servicios/diseno/diseno.component';
+import { NavigatorService } from 'app/navigator.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { DisenoComponent } from './servicios/diseno/diseno.component';
     FormsModule,
     MnFullpageModule.forRoot()
   ],
-  providers: [],
+  providers: [ NavigatorService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
