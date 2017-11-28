@@ -9,10 +9,12 @@
   </div>
   <div class="section ">
     <div class="slide fp-tableCell diseno">
-      <pi-diseno></pi-diseno>
+      <pi-servicio [title]="'Diseño'" [items]="itemsDiseno" 
+      [imgSrc]="'/assets/pinata-paint.svg'" [titleImgSrc]="'/assets/diseno-lapiz.svg'"></pi-servicio>
     </div>
     <div class="slide  fp-tableCell  impresion">
-      IMPRESION
+      <pi-servicio [title]="'Impresión'" [items]="itemsImpresion" 
+      [imgSrc]="'/assets/pinata-paper.svg'" [titleImgSrc]="'/assets/impresion-papel.svg'"></pi-servicio>
     </div>
     <div class="slide  fp-tableCell  web">
       WEB
