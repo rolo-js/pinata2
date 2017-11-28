@@ -10,7 +10,6 @@ import { MenuComponent } from './topnav/menu/menu.component';
 import { HomeComponent } from './home/home.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ValorComponent } from './nosotros/valor/valor.component';
-import { DisenoComponent } from './servicios/diseno/diseno.component';
 import { NavigatorService } from 'app/navigator.service';
 import { ServicioComponent } from './servicios/servicio/servicio.component';
 
@@ -23,7 +22,6 @@ import { ServicioComponent } from './servicios/servicio/servicio.component';
     HomeComponent,
     NosotrosComponent,
     ValorComponent,
-    DisenoComponent,
     ServicioComponent
   ],
   imports: [
