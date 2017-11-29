@@ -12,6 +12,7 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
 import { ValorComponent } from './nosotros/valor/valor.component';
 import { NavigatorService } from 'app/navigator.service';
 import { ServicioComponent } from './servicios/servicio/servicio.component';
+import { ClientesComponent } from './clientes/clientes.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ServicioComponent } from './servicios/servicio/servicio.component';
     HomeComponent,
     NosotrosComponent,
     ValorComponent,
-    ServicioComponent
+    ServicioComponent,
+    ClientesComponent
   ],
   imports: [
     BrowserModule,
