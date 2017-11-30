@@ -21,7 +21,6 @@ export class NavigatorService {
     slidesNavigation: true,
     controlArrows: false,
     onLeave: ( index, nextSlideIndex, direction) => {
-      console.log(index, nextSlideIndex, direction, this.forcing, this.currentSlide);
       if (!this.forcing) {
         if (index === 3 && direction === 'down') {
           if (this.currentSlide === maxSlides) {
