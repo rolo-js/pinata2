@@ -1,27 +1,42 @@
 <div class="wrapper container">
   <h1>Nuestros Clientes</h1>
-  <ul class="logo-container">
-    <li>
+  <h2>Brindamos a nuestros clientes soluciones basadas en estrategia, estética y creatividad </h2>
+  <ngx-carousel [inputs]="carouselOne" (carouselLoad)="myfunc($event)">
+    <ngx-item NgxCarouselItem>
       <img src="/assets/img/clientes-sedesol-01.svg" alt="">
-    </li>
-    <li>
+    </ngx-item>
+    <ngx-item NgxCarouselItem>
       <img src="/assets/img/clientes-apple-02.svg" alt="">
-    </li>
-    <li>
+    </ngx-item>
+    <ngx-item NgxCarouselItem>
       <img src="/assets/img/clientes-biorad-03.svg" alt="">
-    </li>
-    <li>
+    </ngx-item>
+    <ngx-item NgxCarouselItem>
       <img src="/assets/img/clientes-lawbiz-04.svg" alt="">
-    </li>
-    <li>
+    </ngx-item>
+    <ngx-item NgxCarouselItem>
       <img src="/assets/img/clientes-affaris-05.svg" alt="">
-    </li>
-    <li>
+    </ngx-item>
+    <ngx-item NgxCarouselItem>
       <img src="/assets/img/clientes-explora-06.svg" alt="">
-    </li>
-    <li>
+    </ngx-item>
+    <ngx-item NgxCarouselItem>
       <img src="/assets/img/clientes-vela-07.svg" alt="">
-    </li>
+    </ngx-item>
+    <button NgxCarouselPrev class='leftRs' style="opacity:0">&lt;</button>
+    <button NgxCarouselNext class='rightRs' style="opacity:0">&gt;</button>
+  </ngx-carousel>
 
-  </ul>
+  <ngx-carousel [inputs]="carouselTile">
+        <ngx-item NgxCarouselItem >
+            <img src="/assets/img/test-julio.png" alt="">
+        </ngx-item>
+        <ngx-item NgxCarouselItem >
+            <img src="/assets/img/test-rol.png" alt="">
+        </ngx-item>
+
+      <button NgxCarouselPrev class='leftRs'>&lt;</button>
+      <button NgxCarouselNext class='rightRs'>&gt;</button>
+</ngx-carousel>
+
 </div>

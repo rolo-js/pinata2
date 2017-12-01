@@ -13,6 +13,9 @@ import { ValorComponent } from './nosotros/valor/valor.component';
 import { NavigatorService } from 'app/navigator.service';
 import { ServicioComponent } from './servicios/servicio/servicio.component';
 import { ClientesComponent } from './clientes/clientes.component';
+import { NgxCarouselModule } from 'ngx-carousel';
+import 'hammerjs';
+import { TestimonioComponent } from './clientes/testimonio/testimonio.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +27,14 @@ import { ClientesComponent } from './clientes/clientes.component';
     NosotrosComponent,
     ValorComponent,
     ServicioComponent,
-    ClientesComponent
+    ClientesComponent,
+    TestimonioComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    MnFullpageModule.forRoot()
+    MnFullpageModule.forRoot(),
+    NgxCarouselModule
   ],
   providers: [ NavigatorService ],
   bootstrap: [AppComponent]

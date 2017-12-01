@@ -39,16 +39,7 @@ export class NavigatorService {
           }
         }
       } else {
-        // if (nextSlideIndex === 3 && index !== 3) {
-        //   if (direction === 'up') {
-        //       this.currentSlide = 0;
-        //   }
-        //   if (direction === 'down') {
-        //     this.currentSlide = maxSlides;
-        //   }
-        //   // this.mnFullpageService.moveTo(nextSlideIndex, this.currentSlide);
-        //   return false;
-        // }
+
       }
 
       this.forcing = false;
