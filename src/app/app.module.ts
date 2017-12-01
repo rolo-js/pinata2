@@ -15,7 +15,7 @@ import { ServicioComponent } from './servicios/servicio/servicio.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
-import { TestimonioComponent } from './clientes/testimonio/testimonio.component';
+
 
 @NgModule({
   declarations: [
@@ -27,8 +27,7 @@ import { TestimonioComponent } from './clientes/testimonio/testimonio.component'
     NosotrosComponent,
     ValorComponent,
     ServicioComponent,
-    ClientesComponent,
-    TestimonioComponent
+    ClientesComponent
   ],
   imports: [
     BrowserModule,
