@@ -17,7 +17,7 @@ import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
 import { ContactComponent } from './contact/contact.component';
 import { CformComponent } from './contact/cform/cform.component';
-
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -37,7 +37,10 @@ import { CformComponent } from './contact/cform/cform.component';
     BrowserModule,
     FormsModule,
     MnFullpageModule.forRoot(),
-    NgxCarouselModule
+    NgxCarouselModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDnnA0eGQqvkqLKR3kW-OcsCOv4sULDzrg'
+    })
   ],
   providers: [ NavigatorService ],
   bootstrap: [AppComponent]
