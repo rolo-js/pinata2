@@ -1,0 +1,123 @@
+@import "../_variables.less";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+
+    h1 {
+        font-family: MargotBold;
+        font-size: 44px;
+        color:@texto-verde-contacto;
+        @media (max-width: 767px) { margin-top:100px; }
+    }
+    .contenido {
+        display: flex;
+        > div {
+            width: 50%;
+            @media (max-width: 767px) { width: 100%; }
+        }
+        @media (max-width: 767px) { flex-direction: column; }
+        .descripcion {
+           position: relative;
+           height: 350px;
+            &>img {
+                position: absolute;
+                right: 100px;
+                bottom: 0;
+                width: 250px;
+
+            }
+            h2 {
+                font-family: SansationRegular;
+                font-size: 15px;
+                color: @texto-verde-contacto;
+                margin-bottom: 0;
+                img {
+                    position: relative;
+                    top: 5px;
+                    margin-right: 5px;
+                }
+            }
+            p {
+                font-family: SansationLight;
+                font-size: 14px;
+                color: white;
+                margin-left: 29px;
+                margin-top: 7px;
+                line-height: 20px;
+                a, a:hover, a:visited {
+                    color:white;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+            ul {
+                list-style: none;
+                padding-left: 29px;
+                li {
+                    display: inline-block;
+                    img {
+                        height: 24px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+
+        }
+        .forma {
+            width: 50%;
+            max-width: 50%;
+            ::-webkit-input-placeholder {
+                color:#FFFFFF80;
+            }
+            
+            ::-moz-placeholder {
+                color:#FFFFFF80;
+            }
+            
+            ::-ms-placeholder {
+                color:#FFFFFF80;
+            }
+            
+            ::placeholder {
+                color:#FFFFFF80;
+            }
+            input, textarea {
+                box-sizing: border-box;
+                width: 100%;
+                background: transparent;
+                border: 2px solid rgba(255,255,255,0.7);
+                border-radius: 15px;
+                padding: 15px;
+                margin: 8px 0;
+                overflow: hidden;
+                color: white;
+                font-family: Arial;
+                &.user {
+                    background: url(/assets/img/icono-user.svg) no-repeat scroll 95% 12px;
+                }
+                &.email {
+                    background: url(/assets/img/icono-email2.svg) no-repeat scroll 95% 12px ;                    
+                }
+            }
+            button {
+                background: transparent;
+                border: 2px solid rgba(255,255,255,0.7);
+                display: inline-block;
+                border-radius: 15px;
+                padding: 15px;
+                color: white;
+                margin-right: 15px;
+                text-transform: uppercase;
+                font-family: SansationRegular;
+                font-size: 13px;
+                cursor: pointer;
+            }
+         
+        }
+    }
+}
+
+

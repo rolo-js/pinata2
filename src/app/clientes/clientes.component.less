@@ -16,7 +16,7 @@ h2 {
     font-size: 14px;
     color: @texto-gris96;
     text-align: center;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .item {
@@ -28,11 +28,11 @@ h2 {
     margin: auto;
     top: 0;
     bottom: 0;
-    width: 50px;
-    height: 50px;
-    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
-    border-radius: 999px;
+    width: 34px;
+    height: 68px;
     left: 0;
+    border: none;
+    background: url('/assets/img/test-btn-izq.svg')
 }
 
 .rightRs {
@@ -40,9 +40,46 @@ h2 {
     margin: auto;
     top: 0;
     bottom: 0;
-    width: 50px;
-    height: 50px;
-    box-shadow: 1px 2px 10px -1px rgba(0, 0, 0, .3);
-    border-radius: 999px;
+    width: 34px;
+    height: 68px;
     right: 0;
+    border: none;
+    background: url('/assets/img/test-btn-der.svg')
+}
+.testimonio {
+    width: 420px;
+    height: 260px;
+    padding: 150px 90px 30px 90px;
+    background-position: center;
+    background-repeat: no-repeat;
+    h3 {
+        text-align: left;
+        font-family: SansationBold;
+        font-size: 18px;
+        color: #acff6f;
+    }
+
+    p {
+        text-align: left;
+        font-family: SansationRegular;
+        font-size: 14px;
+        color: #fffefe;
+        line-height: 24px;
+    }
+}
+ngx-carousel {
+    position: static;
+}
+.ngxcarousel > .ngxcarousel-inner, .container, ngx-carousel[_nghost-c9] {
+    position: static;
+}
+.tests {
+    position: relative;
+}
+
+.rolando {
+    background-image: url('/assets/img/test-rol.png');
+}
+.julio {
+    background-image: url('/assets/img/test-julio.png');
 }

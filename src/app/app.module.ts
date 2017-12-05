@@ -15,6 +15,8 @@ import { ServicioComponent } from './servicios/servicio/servicio.component';
 import { ClientesComponent } from './clientes/clientes.component';
 import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
+import { ContactComponent } from './contact/contact.component';
+import { CformComponent } from './contact/cform/cform.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import 'hammerjs';
     NosotrosComponent,
     ValorComponent,
     ServicioComponent,
-    ClientesComponent
+    ClientesComponent,
+    ContactComponent,
+    CformComponent
   ],
   imports: [
     BrowserModule,

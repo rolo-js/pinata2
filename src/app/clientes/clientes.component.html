@@ -26,17 +26,39 @@
     <button NgxCarouselPrev class='leftRs' style="opacity:0">&lt;</button>
     <button NgxCarouselNext class='rightRs' style="opacity:0">&gt;</button>
   </ngx-carousel>
-
-  <ngx-carousel [inputs]="carouselTile">
-        <ngx-item NgxCarouselItem >
-            <img src="/assets/img/test-julio.png" alt="">
-        </ngx-item>
-        <ngx-item NgxCarouselItem >
-            <img src="/assets/img/test-rol.png" alt="">
-        </ngx-item>
-
-      <button NgxCarouselPrev class='leftRs'>&lt;</button>
-      <button NgxCarouselNext class='rightRs'>&gt;</button>
-</ngx-carousel>
-
+</div>
+<div class="tests">
+  <div class="container">
+    <ngx-carousel [inputs]="carouselTile">
+      <ngx-item NgxCarouselItem>
+        <div class="testimonio rolando">
+          <h3>Rolando Rios - Affaris</h3>
+          <p>Piñata Studio está integrada por un grupo de especialistas con más de diez años de experiencia en publicidad. Somos
+            un equipo joven, tenaz, y creemos que la creatividad es producto de un proceso basado en un método efectivo y
+            no solamente en buenas ideas.
+          </p>
+        </div>
+      </ngx-item>
+      <ngx-item NgxCarouselItem>
+        <div class="testimonio julio">
+          <h3>Julio Aragón - Lawbiz</h3>
+          <p>Piñata Studio está integrada por un grupo de especialistas con más de diez años de experiencia en publicidad. Somos
+            un equipo joven, tenaz, y creemos que la creatividad es producto de un proceso basado en un método efectivo y
+            no solamente en buenas ideas.
+          </p>
+        </div>
+      </ngx-item>
+      <ngx-item NgxCarouselItem>
+        <div class="testimonio rolando">
+          <h3>Rolando Rios - Affaris</h3>
+          <p>Piñata Studio está integrada por un grupo de especialistas con más de diez años de experiencia en publicidad. Somos
+            un equipo joven, tenaz, y creemos que la creatividad es producto de un proceso basado en un método efectivo y
+            no solamente en buenas ideas.
+          </p>
+        </div>
+      </ngx-item>
+      <button NgxCarouselPrev class='leftRs'></button>
+      <button NgxCarouselNext class='rightRs'></button>
+    </ngx-carousel>
+  </div>
 </div>
