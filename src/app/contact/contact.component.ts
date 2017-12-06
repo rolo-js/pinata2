@@ -169,7 +169,7 @@ export class ContactComponent implements OnInit {
       ]
     }
   ];
-
+  iconUrl = '/assets/img/drop-pin.svg';
   constructor() { }
 
   ngOnInit() {

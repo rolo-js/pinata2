@@ -18,6 +18,9 @@ import 'hammerjs';
 import { ContactComponent } from './contact/contact.component';
 import { CformComponent } from './contact/cform/cform.component';
 import { AgmCoreModule } from '@agm/core';
+import { PromosComponent } from './contact/promos/promos.component';
+import { DirsComponent } from './contact/dirs/dirs.component';
+import { RecientesComponent } from './contact/recientes/recientes.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { AgmCoreModule } from '@agm/core';
     ServicioComponent,
     ClientesComponent,
     ContactComponent,
-    CformComponent
+    CformComponent,
+    PromosComponent,
+    DirsComponent,
+    RecientesComponent
   ],
   imports: [
     BrowserModule,

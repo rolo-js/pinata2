@@ -1,21 +1,41 @@
-<div class="wrapper container">
+<div class="gradientbg">
+  <div class="wrapper container">
     <h1>Contacto</h1>
     <div class="contenido">
       <div class="descripcion">
-        <h2> <img src="/assets/img/icono-movil.svg" alt=""> Teléfono:</h2>
-        <p><a href="tel:+52-55-6237-9523">+52 (55) 6237 9523</a></p>
-        <h2><img src="/assets/img/icono-email.svg" alt=""> E-mail:</h2>
-        <p> <a href="mailto:daledale@pinata-studio.com">daledale@pinata-studio.com</a></p>
-        <h2><img src="/assets/img/icono-loc.svg" alt=""> Dirección:</h2>
-        <p>Av. Monterrey No. 159 ,<br/>
-            Col. Roma, Del. Cuauhtémoc<br/>
-            C.P. 06700, CDMX, México</p>
-            <ul>
-              <li> <a href=""> <img src="/assets/img/icono-facebook.svg" alt=""> </a></li>
-              <li> <a href=""> <img src="/assets/img/icono-instagram.svg" alt=""> </a></li>
-              <li> <a href=""> <img src="/assets/img/icono-pinterest.svg" alt=""> </a></li>
-              <li> <a href=""> <img src="/assets/img/icono-twitter.svg" alt=""> </a></li>
-            </ul>
+        <h2>
+          <img src="/assets/img/icono-movil.svg" alt=""> Teléfono:</h2>
+        <p>
+          <a href="tel:+52-55-6237-9523">+52 (55) 6237 9523</a>
+        </p>
+        <h2>
+          <img src="/assets/img/icono-email.svg" alt=""> E-mail:</h2>
+        <p>
+          <a href="mailto:daledale@pinata-studio.com">daledale@pinata-studio.com</a>
+        </p>
+        <h2>
+          <img src="/assets/img/icono-loc.svg" alt=""> Dirección:</h2>
+        <p>Av. Monterrey No. 159 ,
+          <br/> Col. Roma, Del. Cuauhtémoc
+          <br/> C.P. 06700, CDMX, México</p>
+        <ul>
+          <li>
+            <a href="">
+              <img src="/assets/img/icono-facebook.svg" alt=""> </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="/assets/img/icono-instagram.svg" alt=""> </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="/assets/img/icono-pinterest.svg" alt=""> </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="/assets/img/icono-twitter.svg" alt=""> </a>
+          </li>
+        </ul>
         <img src="/assets/img/pinata-phone.svg" alt="">
       </div>
       <div class="forma">
@@ -29,7 +49,23 @@
       </div>
     </div>
   </div>
+</div>
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [styles]="styles" [scrollwheel]="false" [streetViewControl]="false"
+  [gestureHandling]="'cooperative'">
+  <agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="iconUrl"></agm-marker>
+</agm-map>
 
-  <!-- <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [styles]="styles" >
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map> -->
+
+<footer class="footer">
+  <div class="container">
+    <pi-promos class="fchild"></pi-promos>  
+    <pi-dirs class="fchild"></pi-dirs>
+    <pi-recientes class="fchild"></pi-recientes>
+    
+  </div>
+</footer>
+<footer class="footer2">
+  <div class="container">
+    <div class="crnotice">© 2017 Piñata Studio. All Rights Reserved</div>
+  </div>
+</footer>
