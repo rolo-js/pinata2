@@ -17,7 +17,6 @@ export class NavigatorService {
     css3: true,
     navigationPosition: 'right',
     verticalCentered: false,
-    scrollOverflow: true,
     slidesNavigation: true,
     controlArrows: false,
     onLeave: ( index, nextSlideIndex, direction) => {
@@ -44,7 +43,12 @@ export class NavigatorService {
 
       this.forcing = false;
       this.currentPageSource.next(nextSlideIndex);
-    }
+    },
+    scrollOverflow: true,
+    scrollOverflowOptions: {
+      click: false,
+      preventDefaultException: { tagName: /.*/ }
+    },
   });
 
   constructor(private mnFullpageService: MnFullpageService) { }

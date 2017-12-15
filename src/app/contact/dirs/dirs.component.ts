@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirsComponent implements OnInit {
 
+  socialColor = '#95d600';
   constructor() { }
 
   ngOnInit() {

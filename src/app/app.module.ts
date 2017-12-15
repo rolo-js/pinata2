@@ -21,6 +21,10 @@ import { AgmCoreModule } from '@agm/core';
 import { PromosComponent } from './contact/promos/promos.component';
 import { DirsComponent } from './contact/dirs/dirs.component';
 import { RecientesComponent } from './contact/recientes/recientes.component';
+import { FacebookComponent } from './cmps/facebook/facebook.component';
+import { InstagramComponent } from './cmps/instagram/instagram.component';
+import { TwitterComponent } from './cmps/twitter/twitter.component';
+import { PinterestComponent } from './cmps/pinterest/pinterest.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +41,11 @@ import { RecientesComponent } from './contact/recientes/recientes.component';
     CformComponent,
     PromosComponent,
     DirsComponent,
-    RecientesComponent
+    RecientesComponent,
+    FacebookComponent,
+    InstagramComponent,
+    TwitterComponent,
+    PinterestComponent
   ],
   imports: [
     BrowserModule,

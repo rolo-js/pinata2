@@ -170,6 +170,7 @@ export class ContactComponent implements OnInit {
     }
   ];
   iconUrl = '/assets/img/drop-pin.svg';
+  socialColor = '#ACFF6F';
   constructor() { }
 
   ngOnInit() {
