@@ -25,6 +25,7 @@ import { FacebookComponent } from './cmps/facebook/facebook.component';
 import { InstagramComponent } from './cmps/instagram/instagram.component';
 import { TwitterComponent } from './cmps/twitter/twitter.component';
 import { PinterestComponent } from './cmps/pinterest/pinterest.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { PinterestComponent } from './cmps/pinterest/pinterest.component';
     NgxCarouselModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDnnA0eGQqvkqLKR3kW-OcsCOv4sULDzrg'
-    })
+    }),
+    HttpClientModule
   ],
   providers: [ NavigatorService ],
   bootstrap: [AppComponent]

@@ -29,7 +29,7 @@
 </div>
 <div class="tests">
   <div class="container">
-    <ngx-carousel [inputs]="carouselTile">
+    <ngx-carousel [inputs]="carouselTile" (carouselLoad)="myfunc($event)">
       <ngx-item NgxCarouselItem>
         <div class="testimonio rolando">
           <h3>Rolando Rios - Affaris</h3>

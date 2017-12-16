@@ -20,6 +20,12 @@ export class NavigatorService {
     slidesNavigation: true,
     controlArrows: false,
     onLeave: ( index, nextSlideIndex, direction) => {
+      console.log(nextSlideIndex);
+/*       if (nextSlideIndex === 5) {
+        this.mnFullpageService.setAutoScrolling(false);
+      } else {
+        this.mnFullpageService.setAutoScrolling(true);
+      } */
       if (!this.forcing) {
         if (index === 3 && direction === 'down') {
           if (this.currentSlide === maxSlides) {
@@ -48,7 +54,7 @@ export class NavigatorService {
     scrollOverflowOptions: {
       click: false,
       preventDefaultException: { tagName: /.*/ }
-    },
+    }
   });
 
   constructor(private mnFullpageService: MnFullpageService) { }

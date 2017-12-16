@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'pi-recientes',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RecientesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
 
+  getJson() {
+    this.http.get('/assets/list.json').subscribe( data => {
+      console.log(data);
+    })
+  }
 }

@@ -1,0 +1,12 @@
+[
+    {
+        "cliente": "Affaris",
+        "imagen": "tmp/list.jpg",
+        "texto": "Now is the time for all good men..."
+    },
+    {
+        "cliente": "SmartCards",
+        "imagen": "tmp/list.jpg",
+        "texto": "Ahora en CDMX"
+    }
+]
